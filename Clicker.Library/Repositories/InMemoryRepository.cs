@@ -1,6 +1,6 @@
 ﻿using System;
-using Clicker.Domain;
-using Clicker.Domain.Data;
+using Clicker.Library;
+using Clicker.Library.Services;
 using Newtonsoft.Json;
 
 namespace Clicker.Data
