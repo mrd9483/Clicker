@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Clicker.Engine
+namespace Clicker.Library
 {
     public class ClickerEngine
     {

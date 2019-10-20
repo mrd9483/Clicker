@@ -1,9 +1,8 @@
-﻿using System;
-using Clicker.Library;
-using Clicker.Library.Services;
+﻿using Clicker.Library.Interfaces;
+using Clicker.Library.Models;
 using Newtonsoft.Json;
 
-namespace Clicker.Data
+namespace Clicker.Library.Repositories
 {
     public class InMemoryRepository : IClickerRepository
     {

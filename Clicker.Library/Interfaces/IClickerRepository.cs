@@ -1,7 +1,7 @@
 ﻿using System;
-using Clicker.Domain.Data;
+using Clicker.Library.Models;
 
-namespace Clicker.Domain
+namespace Clicker.Library.Interfaces
 {
     public interface IClickerRepository : IDisposable
     {

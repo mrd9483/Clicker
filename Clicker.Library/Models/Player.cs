@@ -1,6 +1,6 @@
 using System;
 
-namespace Clicker.Domain.Data
+namespace Clicker.Library.Models
 {
     [Serializable]
     public class Player

@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace Clicker.Domain.Data
+namespace Clicker.Library.Services
 {
     public class AutomatorCollection : List<Automator>, IEnumerable
     {

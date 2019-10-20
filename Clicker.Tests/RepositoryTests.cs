@@ -1,5 +1,5 @@
-using Clicker.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Clicker.Library.Repositories;
 
 namespace Clicker.Tests
 {

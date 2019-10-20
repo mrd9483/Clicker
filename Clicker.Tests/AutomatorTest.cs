@@ -1,6 +1,6 @@
 ﻿using System;
-using Clicker.Domain.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Clicker.Library.Services;
 
 namespace Clicker.Tests
 {

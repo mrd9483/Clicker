@@ -14,8 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Clicker.Data\Clicker.Data.csproj" />
-    <ProjectReference Include="..\Clicker.Domain\Clicker.Domain.csproj" />
+    <ProjectReference Include="..\Clicker.Library\Clicker.Library.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="InMemoryPlayerRepository.cs" />

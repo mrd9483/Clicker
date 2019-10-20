@@ -1,9 +1,9 @@
 ﻿using System;
-namespace Clicker.Domain.Data
+namespace Clicker.Library.Services
 {
     public class Automator
     {
-        private Model.Automator _model { get; }
+        private Models.Automator _model { get; }
 
         public long InitialUnitsPerTick => _model.InitialUnitsPerTick;
         public long InitialAutomatorCost => _model.InitialAutomatorCost;
@@ -20,7 +20,7 @@ namespace Clicker.Domain.Data
         public long MultiplierCost { get; private set; }
         public long UnitsPerTick { get; private set; }
 
-        public Automator(Model.Automator model)
+        public Automator(Models.Automator model)
         {
             _model = model;
 
@@ -37,7 +37,7 @@ namespace Clicker.Domain.Data
         }
 
         public Automator(long initialCost, long initialMultiplierCost, decimal automatorCostMultiplier, decimal multiplierCostMultiplier, long initialCostPerTick, string name, string description)
-            : this(new Model.Automator()
+            : this(new Models.Automator()
             {
                 InitialAutomatorCost = initialCost,
                 InitialMultiplierCost = initialMultiplierCost,
