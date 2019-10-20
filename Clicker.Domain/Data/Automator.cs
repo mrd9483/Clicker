@@ -3,28 +3,51 @@ namespace Clicker.Domain.Data
 {
     public class Automator
     {
-        public long InitialUnitsPerSecond { get; }
-        public long InitialAutomatorCost { get; }
-        public long InitialMultiplierCost { get; }
-        public decimal MultiplierCostMultiplier { get; }
-        public decimal AutomatorCostMultiplier { get; }
+        private Model.Automator _model { get; }
+
+        public long InitialUnitsPerTick => _model.InitialUnitsPerTick;
+        public long InitialAutomatorCost => _model.InitialAutomatorCost;
+        public long InitialMultiplierCost => _model.InitialMultiplierCost;
+        public decimal MultiplierCostMultiplier => _model.MultiplierCostMultiplier;
+        public decimal AutomatorCostMultiplier => _model.AutomatorCostMultiplier;
+
+        public string Name => _model.Name;
+        public string Description => _model.Description;
 
         public int Count { get; private set; }
         public int Multiplier { get; private set; }
         public long AutomatorCost { get; private set; }
         public long MultiplierCost { get; private set; }
-        public long UnitsPerSecond { get; private set; }
+        public long UnitsPerTick { get; private set; }
 
-        public Automator(long initialCost, long initialMultiplierCost, decimal automatorCostMultiplier, decimal multiplierCostMultiplier, long initialCostPerSecond)
+        public Automator(Model.Automator model)
         {
-            InitialAutomatorCost = AutomatorCost = initialCost;
-            InitialMultiplierCost = MultiplierCost = initialMultiplierCost;
-            AutomatorCostMultiplier = automatorCostMultiplier;
-            MultiplierCostMultiplier = multiplierCostMultiplier;
-            InitialUnitsPerSecond = initialCostPerSecond;
+            _model = model;
+
+            AutomatorCost = model.InitialAutomatorCost;
+            MultiplierCost = model.InitialMultiplierCost;
             Count = 0;
             Multiplier = 1;
-            UnitsPerSecond = 0;
+            UnitsPerTick = 0;
+        }
+
+        public Automator(long initialCost, long initialMultiplierCost, decimal automatorCostMultiplier, decimal multiplierCostMultiplier, long initialCostPerTick)
+            : this(initialCost, initialMultiplierCost, automatorCostMultiplier, multiplierCostMultiplier, initialCostPerTick, null, null)
+        {
+        }
+
+        public Automator(long initialCost, long initialMultiplierCost, decimal automatorCostMultiplier, decimal multiplierCostMultiplier, long initialCostPerTick, string name, string description)
+            : this(new Model.Automator()
+            {
+                InitialAutomatorCost = initialCost,
+                InitialMultiplierCost = initialMultiplierCost,
+                AutomatorCostMultiplier = automatorCostMultiplier,
+                MultiplierCostMultiplier = multiplierCostMultiplier,
+                InitialUnitsPerTick = initialCostPerTick,
+                Name = name,
+                Description = description
+            })
+        {
         }
 
         public void IncrementAutomator()
@@ -43,7 +66,7 @@ namespace Clicker.Domain.Data
 
         private void SetUnitsPerSecond()
         {
-            UnitsPerSecond = Multiplier * Count * InitialUnitsPerSecond;
+            UnitsPerTick = Multiplier * Count * InitialUnitsPerTick;
         }
     }
 }

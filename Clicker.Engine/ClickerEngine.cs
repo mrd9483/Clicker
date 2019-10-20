@@ -4,6 +4,6 @@ namespace Clicker.Engine
 {
     public class ClickerEngine
     {
-
+        
     }
 }

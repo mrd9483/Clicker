@@ -26,15 +26,15 @@ namespace Clicker.Tests
         public void Automator_Initialize_ZeroedOut()
         {
             Assert.AreEqual(0, testAutomator.Count);
-            Assert.AreEqual(0, testAutomator.UnitsPerSecond);
+            Assert.AreEqual(0, testAutomator.UnitsPerTick);
         }
 
         [TestMethod]
-        public void Automator_IncrementCount_InitialCPS()
+        public void Automator_IncrementCount_InitialCPT()
         {
             testAutomator.IncrementAutomator();
             Assert.AreEqual(1, testAutomator.Count);
-            Assert.AreEqual(1L, testAutomator.UnitsPerSecond);
+            Assert.AreEqual(1L, testAutomator.UnitsPerTick);
         }
 
         [TestMethod]
@@ -46,7 +46,7 @@ namespace Clicker.Tests
         }
 
         [TestMethod]
-        public void Automator_IncrementCountFiveTimes_NewCPS()
+        public void Automator_IncrementCountFiveTimes_NewCPT()
         {
             testAutomator.IncrementAutomator();
             testAutomator.IncrementAutomator();
@@ -54,7 +54,7 @@ namespace Clicker.Tests
             testAutomator.IncrementAutomator();
             testAutomator.IncrementAutomator();
             Assert.AreEqual(5, testAutomator.Count);
-            Assert.AreEqual(5L, testAutomator.UnitsPerSecond);
+            Assert.AreEqual(5L, testAutomator.UnitsPerTick);
         }
 
         [TestMethod]
@@ -78,7 +78,7 @@ namespace Clicker.Tests
         }
 
         [TestMethod]
-        public void Automator_IncrementMultiplierFiveTimes_NewCPS()
+        public void Automator_IncrementMultiplierFiveTimes_NewCPT()
         {
             testAutomator.IncrementAutomator(); //do this twice so it's not 1.
             testAutomator.IncrementAutomator(); //do this twice so it's not 1.
@@ -87,7 +87,7 @@ namespace Clicker.Tests
             testAutomator.IncrementMultiplier();
             testAutomator.IncrementMultiplier();
             Assert.AreEqual(5, testAutomator.Multiplier);
-            Assert.AreEqual(10L, testAutomator.UnitsPerSecond);
+            Assert.AreEqual(10L, testAutomator.UnitsPerTick);
         }
 
         [TestMethod]
