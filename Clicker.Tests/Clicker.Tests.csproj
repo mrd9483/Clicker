@@ -19,4 +19,13 @@
   <ItemGroup>
     <Compile Remove="InMemoryPlayerRepository.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="AutomatorTest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutomatorTest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>Clicker.Tests.AutomatorTest.json</LogicalName>
+    </Content>
+  </ItemGroup>
 </Project>

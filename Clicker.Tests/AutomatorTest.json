@@ -1,0 +1,38 @@
+﻿[
+  {
+    "InitialUnitsPerTick": 1,
+    "InitialAutomatorCost": 100,
+    "InitialMultiplierCost": 1000,
+    "MultiplierCostMultiplier": 3,
+    "AutomatorCostMultiplier": 1.3,
+    "Name": "Autoclicker",
+    "Description": ""
+  },
+  {
+    "InitialUnitsPerTick": 10,
+    "InitialAutomatorCost": 1000,
+    "InitialMultiplierCost": 100000,
+    "MultiplierCostMultiplier": 3,
+    "AutomatorCostMultiplier": 1.3,
+    "Name": "Super Autoclicker",
+    "Description": ""
+  },
+  {
+    "InitialUnitsPerTick": 100,
+    "InitialAutomatorCost": 100000,
+    "InitialMultiplierCost": 100000,
+    "MultiplierCostMultiplier": 3,
+    "AutomatorCostMultiplier": 1.3,
+    "Name": "Mega Autoclicker",
+    "Description": ""
+  },
+  {
+    "InitialUnitsPerTick": 1000,
+    "InitialAutomatorCost": 10000000,
+    "InitialMultiplierCost": 100000,
+    "MultiplierCostMultiplier": 3,
+    "AutomatorCostMultiplier": 1.3,
+    "Name": "Factory Autoclicker",
+    "Description": ""
+  }
+]

@@ -1,5 +1,8 @@
-﻿namespace Clicker.Library.Models
+﻿using System;
+
+namespace Clicker.Library.Models
 {
+    [Serializable]
     public class Automator
     {
         public long InitialUnitsPerTick { get; set; }
